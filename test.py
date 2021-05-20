@@ -159,3 +159,79 @@ print("...Hello...".lstrip("."))
 print("[" + "Apple".ljust(8) + "]")
 print("[" + "Apple".center(8) + "]")
 print("[" + "Apple".rjust(8) + "]")
+
+
+r = range(10)
+print(r)
+print(list(r))
+
+r = range(0, 100, 3)
+print(r)
+print(list(r))
+print(list(r[3:10]))
+
+postcode = "125-0062"
+if postcode == "140-0015":
+    address = "東京都品川区西大井"
+elif postcode == "102-0072":
+    address = "東京都千代田区飯田橋"
+elif postcode == "125-0062":
+    address = "東京都葛飾区青戸"
+else:
+    address = "不明"
+print("住所は " + address + " です。")
+
+
+num = 1
+print("Start")
+while num < 6:
+    print("num = " + str(num))
+    num += 1
+print("End")
+
+
+num = 1
+total = 0
+print("start")
+while num < 6:
+    print("num = " + str(num))
+    total += num
+    num += 1
+else:
+    print("Total = " + str(total))
+print("end")
+
+
+num = 1
+while True:
+    print("num = " + str(num))
+    num *= 2
+    if num > 10:
+        print("last num = " + str(num))
+        break
+print("While End")
+
+mylist = ["Orange", "Peach", "Lemon"]
+for val in mylist:
+    print(val)
+
+mydict = {"L":"Lemon", "O":"Orage", "G":"Grapes"}
+
+# キーの一覧を取得
+for mykey in mydict.keys():
+    print(mykey)
+
+# すべての値の一覧を取得
+for myvalue in mydict.values():
+    print(myvalue)
+
+# キーと値の組み合わせの一覧を取得
+for mykey, myvalue in mydict.items():
+    print("key:" + mykey + ", value:" + myvalue)
+
+
+for num in [35, 25, "OK", 45, "Pass", 28, "", "aaa", 1234]:
+    if isinstance(num, str):
+        continue
+    print("num = " + str(num))
+    total += num
