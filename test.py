@@ -235,3 +235,147 @@ for num in [35, 25, "OK", 45, "Pass", 28, "", "aaa", 1234]:
         continue
     print("num = " + str(num))
     total += num
+
+colorlist = ["Blue", "Red", "Green", "White", "Black"]
+print("最後の要素は " + colorlist[len(colorlist) - 1] + " です。")
+print("最後の要素は " + colorlist[- 1] + " です。")
+
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist[0:2])
+print(mylist[2:3])
+
+# リストの長さを取得
+print(len(mylist))
+
+
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist)
+# 2 番目から 4 番目の要素を入れ替える
+mylist[1:4] = ["A", "B", "C"]
+print(mylist)
+
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist)
+# 2 番目から 4 番目の要素を入れ替える
+mylist[1:4] = ["A"]
+print(mylist)
+
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist)
+# 2 番目から 6 番目の要素を 2 つ毎に入れ替える
+mylist[1:7:2] = ["A", "B", "C"]
+print(mylist)
+
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist)
+# 2 つ毎に入れ替える
+mylist[::2] = ["A", "B", "C", "D", "E"]
+print(mylist)
+
+
+# 要素の追加
+mylist = ["A", "B", "C"]
+mylist.append("D")
+print(mylist)
+
+# 開始インデックスと終了インデックスを共にリストの最後の要素の次の位置を指定することで要素をリストの最後に追加することが出来る
+mylist = ["A", "B", "C"]
+mylist[len(mylist):len(mylist)] = ["D", "E"]
+print(mylist)
+
+# リストに別のリストの要素を追加
+mylist = ["A", "B", "C"]
+mylist.extend(["D", "E"])
+print(mylist)
+
+
+# リストの結合
+list1 = ["A", "B"]
+list2 = ["C", "D"]
+list3 = list1 + list2
+print(list1)
+print(list2)
+print(list3)
+
+# リストの乗算
+list = ["1", "2"]
+newlist = list * 5
+print(newlist)
+
+# 要素の挿入
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist)
+mylist.insert(5, "Z")
+print(mylist)
+
+# 要素の削除
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist)
+del mylist[5]
+print(mylist)
+
+# 要素の削除
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist)
+mylist[2:4] = []
+print(mylist)
+
+# pop メソッド
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist.pop())
+print(mylist)
+# pop メソッド
+mylist = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+print(mylist.pop(3))
+print(mylist)
+
+# 指定した値と同じ値を持つ要素をリストから削除
+mylist = ["A", "B", "C", "D", "E"]
+print(mylist)
+mylist.remove("C")
+print(mylist)
+
+# 複数の要素で一致する場合には最初に一致した要素を削除する
+mylist = ["A", "B", "C", "D", "E", "A", "B", "C", "D", "E"]
+print(mylist)
+mylist.remove("C")
+print(mylist)
+
+# リストからすべての要素を削除する
+mylist = ["A", "B", "C", "D", "E", "A", "B", "C", "D", "E"]
+print(mylist)
+mylist.clear()
+print(mylist)
+
+# 指定の値を持つ要素がリストの中に含まれているか判定する
+mylist = ["A", "B", "C", "D", "E"]
+print("A" in mylist)
+print("Z" in mylist)
+
+mylist = ["A", "B", "A", "A", "C"]
+print(mylist.count("A"))
+print(mylist.count("Z"))
+print(mylist.count("AA"))
+
+# 指定の値と同じ値を持つ要素のインデックスを取得する
+mylist = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+print(mylist.index("D"))
+print(mylist.index("B"))
+
+# 要素を並び替える
+mylist = ["A1", "B2", "H", "G", "F", "E", "D", "C", "B", "A"]
+newlist = sorted(mylist)
+print(mylist)
+print(newlist)
+
+# 要素を並び替える
+mylist = ["A1", "B2", "H", "G", "F", "E", "D", "C", "B", "A"]
+mylist.sort()
+print(mylist)
+
+# 要素を並び替える（逆順）
+mylist = ["A1", "B2", "H", "G", "F", "E", "D", "C", "B", "A"]
+newlist = sorted(mylist, key=None, reverse=True)
+print(mylist)
+print(newlist)
+
