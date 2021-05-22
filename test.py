@@ -379,3 +379,66 @@ newlist = sorted(mylist, key=None, reverse=True)
 print(mylist)
 print(newlist)
 
+
+# タプル
+x = 9
+y = 18
+numtuple = (x, y)
+print(numtuple)
+
+numtuple = (10, 20, 30) * 3
+print(numtuple)
+
+mytuple = ("Orange", "Lemon", "Apple")
+print(mytuple[0])
+print(mytuple[1])
+print(mytuple[2])
+
+# タプルの要素数
+print(len(mytuple))
+
+mytuple = ("A", "B", "C", "D", "E")
+#インデックス 2 から 3 までの要素を取得する
+print(mytuple[2:4])
+print(mytuple[:4])
+print(mytuple[2:])
+
+# タプルの結合
+tuple1 = ("A", "B", "C")
+tuple2 = ("D", "E")
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+# イテラブルなオブジェクトからタプルが作成出来る
+mytuple = tuple("Hello Python")
+print(mytuple)
+mytuple = tuple(["A", "B", "C"])
+print(mytuple)
+mytuple = tuple(range(1,30,3))
+print(mytuple)
+
+# タプルの要素の中で指定した値と同じ値を持つ要素があるか判定
+mytuple = ("A", "B", "C", "D", "E")
+print("A" in mytuple)
+print("AA" in mytuple)
+print("Z" in mytuple)
+
+# 指定の値と同じ値を持つ要素が何個含まれているか
+mytuple = ("A", "B", "A", "A", "C", "AA")
+print(mytuple.count("A"))
+print(mytuple.count("Z"))
+print(mytuple.count("AA"))
+
+# 指定の値と同じ値を持つ要素のインデックスを取得する
+print(mytuple.index("A"))
+print(mytuple.index("B"))
+#print(mytuple.index("Z")) # 見つからなかった場合は ValueError エラーとなる
+#print(mytuple.index("a")) # 見つからなかった場合は ValueError エラーとなる
+print(mytuple.index("AA"))
+
+# 並べ替えを行う
+animaltuple = ("Dog", "Cat", "Bear", "Deer")
+newanimallist = sorted(animaltuple)
+newanimaltuple = tuple(newanimallist)
+print("Before:", animaltuple)
+print("After: ", newanimaltuple)
