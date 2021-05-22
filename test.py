@@ -442,3 +442,7 @@ newanimallist = sorted(animaltuple)
 newanimaltuple = tuple(newanimallist)
 print("Before:", animaltuple)
 print("After: ", newanimaltuple)
+
+# 集合
+myset = {"H", "a", "p", "p", "y"}
+print(myset)
