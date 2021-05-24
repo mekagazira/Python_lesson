@@ -446,3 +446,20 @@ print("After: ", newanimaltuple)
 # 集合
 myset = {"H", "a", "p", "p", "y"}
 print(myset)
+
+
+print("Blue", "Red", "Green")
+# 区切り文字を "+" に変更
+print("Blue", "Red", "Green", sep="+")
+# 改行しないように設定
+# 改行しないように設定
+print("Hello", end="")
+print("Python")
+# 最後に任意の文字列を出力するように設定
+print("Hello", end="[end]\n")
+print("Hello", end="[end]\n")
+
+# ファイルへ出力する
+myfile = open("output.txt", "w")
+print("Hello", file=myfile)
+myfile.close()
