@@ -1,5 +1,6 @@
 import pandas as pd
-
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
 
 # data https://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data
 
@@ -40,6 +41,20 @@ print(train_data.head())
 
 
 X_train = train_data.iloc[:, :7]
-Y_train = train_data.iloc[:, 7]
+y_train = train_data.iloc[:, 7]
 print(X_train.head())
-print(Y_train.head())
+print(y_train.head())
+
+################## 回帰モデルの学習と推定 ##################
+
+# 回帰モデルの定義
+model = RandomForestRegressor()
+
+# 訓練データを使って回帰モデルを構築
+model.fit(X_train, y_train)
+
+# 訓練データに対する推定
+prediction = model.predict(X_train)
+
+# MSE（平均2乗誤差）の計算
+print(mean_squared_error(y_train, prediction))
